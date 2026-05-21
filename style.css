@@ -1,0 +1,25 @@
+/* Estilo geral do site */
+body{
+  font-family: Arial;
+  margin:0;
+  background:#f4f4f4;
+}
+
+/* Cabeçalho */
+header{
+  background:green;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+/* Conteúdo principal */
+section{
+  padding:20px;
+}
+
+/* Classe usada no modo escuro */
+.dark{
+  background:#222;
+  color:white;
+}
