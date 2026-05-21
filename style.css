@@ -23,3 +23,9 @@ section{
   background:#222;
   color:white;
 }
+
+.banner img{
+  width:100%;
+  max-width:600px;
+  border-radius:10px;
+}
