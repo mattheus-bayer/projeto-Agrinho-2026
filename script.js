@@ -8,19 +8,64 @@ function modoEscuro(){
 
 /* QUIZ */
 
-function respostaCorreta(){
+let perguntaAtual = 0;
 
-  document.getElementById("resultadoQuiz").innerHTML =
+const perguntas = [
 
-  "✅ Correto! Sustentabilidade é essencial para o futuro do planeta.";
+  {
+    pergunta:
+    "1. Qual prática ajuda na preservação ambiental?"
+  },
+
+  {
+    pergunta:
+    "2. Qual tecnologia ajuda no monitoramento agrícola?"
+  },
+
+  {
+    pergunta:
+    "3. O que significa sustentabilidade?"
+  }
+
+];
+
+/* Verifica resposta */
+
+function verificarResposta(resposta){
+
+  const resultado =
+  document.getElementById("resultadoQuiz");
+
+  if(resposta === "certa"){
+
+    resultado.innerHTML =
+    "✅ Resposta correta!";
+  }
+
+  else{
+
+    resultado.innerHTML =
+    "❌ Resposta incorreta.";
+  }
 
 }
 
-function respostaErrada(){
+/* Próxima pergunta */
 
-  document.getElementById("resultadoQuiz").innerHTML =
+function proximaPergunta(){
 
-  "❌ Essa prática prejudica o meio ambiente.";
+  perguntaAtual++;
+
+  if(perguntaAtual >= perguntas.length){
+
+    perguntaAtual = 0;
+  }
+
+  document.getElementById("perguntaQuiz").innerHTML =
+
+  perguntas[perguntaAtual].pergunta;
+
+  document.getElementById("resultadoQuiz").innerHTML = "";
 
 }
 
@@ -28,15 +73,11 @@ function respostaErrada(){
 
 function enviarPergunta(){
 
-  /* pega texto digitado */
-
   let pergunta =
 
   document.getElementById("pergunta").value.toLowerCase();
 
   let resposta = "";
-
-  /* condições */
 
   if(pergunta.includes("agua")){
 
@@ -59,7 +100,13 @@ function enviarPergunta(){
   else if(pergunta.includes("sustentabilidade")){
 
     resposta =
-    "🌱 Sustentabilidade é produzir preservando o meio ambiente.";
+    "🌱 Sustentabilidade significa produzir preservando o meio ambiente.";
+  }
+
+  else if(pergunta.includes("agricultura")){
+
+    resposta =
+    "🌾 A agricultura moderna utiliza tecnologia para aumentar a produtividade.";
   }
 
   else{
@@ -68,11 +115,9 @@ function enviarPergunta(){
     "🤖 Ainda estou aprendendo sobre o agro sustentável.";
   }
 
-  /* altera mensagem */
-
   document.getElementById("mensagemBot").innerHTML = resposta;
 
-  /* limpa campo */
+  /* Limpa input */
 
   document.getElementById("pergunta").value = "";
 

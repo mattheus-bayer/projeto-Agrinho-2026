@@ -20,11 +20,11 @@
 
 <body>
 
-  <!-- MENU / CABEÇALHO -->
+  <!-- HEADER = Cabeçalho do site -->
 
   <header>
 
-    <!-- LOGO -->
+    <!-- Logo -->
 
     <div class="logo">
 
@@ -32,7 +32,7 @@
 
     </div>
 
-    <!-- MENU -->
+    <!-- NAV = Menu -->
 
     <nav>
 
@@ -54,17 +54,19 @@
 
   </header>
 
-  <!-- BANNER -->
+  <!-- BANNER PRINCIPAL -->
 
   <section class="banner" id="home">
 
     <!-- Imagem principal -->
 
-    <img src="img/banner.jpg" alt="Banner do Agro">
+    <img src="img/banner.jpg" alt="Banner Agro">
 
-    <!-- Texto sobre imagem -->
+    <!-- Texto sobre a imagem -->
 
     <div class="texto-banner">
+
+      <!-- H1 = título principal -->
 
       <h1>
 
@@ -72,13 +74,15 @@
 
       </h1>
 
+      <!-- P = parágrafo -->
+
       <p>
 
-        Tecnologia e sustentabilidade transformando o agronegócio.
+        Tecnologia, inovação e sustentabilidade transformando o agronegócio.
 
       </p>
 
-      <!-- Botão modo escuro -->
+      <!-- Botão -->
 
       <button onclick="modoEscuro()">
 
@@ -106,9 +110,9 @@
 
     <p>
 
-      O objetivo é mostrar como a tecnologia pode ajudar
-      produtores rurais a preservar recursos naturais
-      e aumentar a produtividade.
+      O objetivo é demonstrar como a tecnologia pode ajudar
+      produtores rurais a preservar recursos naturais,
+      reduzir desperdícios e aumentar a produtividade.
 
     </p>
 
@@ -140,8 +144,8 @@
 
       <p>
 
-        Drones, sensores e inteligência artificial ajudam
-        no monitoramento das lavouras e reduzem desperdícios.
+        Sensores, drones e inteligência artificial ajudam
+        agricultores a monitorar lavouras em tempo real.
 
       </p>
 
@@ -157,8 +161,8 @@
 
       <p>
 
-        Produzir alimentos preservando água, solo e meio ambiente
-        é essencial para o futuro das próximas gerações.
+        Sustentabilidade significa produzir alimentos
+        preservando água, solo e meio ambiente.
 
       </p>
 
@@ -176,15 +180,39 @@
 
     <p>
 
-      A agricultura moderna utiliza tecnologia para monitorar
-      plantações, prever mudanças climáticas e otimizar recursos naturais.
+      A agricultura moderna utiliza tecnologia para aumentar
+      a produtividade e reduzir impactos ambientais.
 
     </p>
 
     <p>
 
-      Sistemas inteligentes ajudam agricultores a tomar decisões
-      mais rápidas e eficientes.
+      Sensores inteligentes conseguem medir:
+      temperatura,
+      umidade do solo
+      e prever mudanças climáticas.
+
+    </p>
+
+    <p>
+
+      Drones agrícolas ajudam no monitoramento das lavouras,
+      permitindo análises rápidas e precisas.
+
+    </p>
+
+    <p>
+
+      A Inteligência Artificial também vem sendo utilizada
+      para controlar irrigação e otimizar recursos naturais.
+
+    </p>
+
+    <p>
+
+      Essas tecnologias ajudam agricultores
+      a produzir mais alimentos utilizando menos água
+      e preservando o meio ambiente.
 
     </p>
 
@@ -196,25 +224,29 @@
 
     <h2>Quiz Ambiental</h2>
 
-    <p>
+    <!-- Pergunta -->
 
-      Qual dessas práticas ajuda na preservação ambiental?
+    <p id="perguntaQuiz">
+
+      1. Qual prática ajuda na preservação ambiental?
 
     </p>
 
-    <button onclick="respostaCorreta()">
+    <!-- Botões -->
+
+    <button onclick="verificarResposta('certa')">
 
       Uso consciente da água
 
     </button>
 
-    <button onclick="respostaErrada()">
+    <button onclick="verificarResposta('errada')">
 
       Queimadas ilegais
 
     </button>
 
-    <button onclick="respostaErrada()">
+    <button onclick="verificarResposta('errada')">
 
       Desmatamento excessivo
 
@@ -223,6 +255,14 @@
     <!-- Resultado -->
 
     <p id="resultadoQuiz"></p>
+
+    <!-- Próxima pergunta -->
+
+    <button onclick="proximaPergunta()">
+
+      Próxima Pergunta
+
+    </button>
 
   </section>
 
@@ -234,14 +274,14 @@
 
     <p>
 
-      O Brasil é um dos maiores produtores agrícolas do mundo.
+      Regiões agrícolas e áreas rurais do Brasil.
 
     </p>
 
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14627.709784082076!2d-46.6333087!3d-23.5505209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8d9b3b7d1%3A0x8d8c4a2d9f8f3f1!2sS%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117115.71518863361!2d-51.172685!3d-23.310280!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb43d6b5a3bfff%3A0x4e5f6e0f7c9d5f22!2sLondrina%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
       width="100%"
-      height="400"
+      height="450"
       style="border:0;"
       allowfullscreen=""
       loading="lazy">
@@ -256,13 +296,19 @@
 
     <h2>ChatBot Agro IA</h2>
 
-    <img src="img/ia.jpg.png" alt="IA no agro">
+    <!-- Caixa do chatbot -->
 
     <div class="caixa-chat">
 
       <p id="mensagemBot">
 
-        Olá! Pergunte algo sobre sustentabilidade ou tecnologia agrícola.
+        🤖 Olá! Sou o Agro IA.
+        Pergunte sobre:
+        água,
+        drones,
+        IA,
+        sustentabilidade
+        ou agricultura.
 
       </p>
 
@@ -297,7 +343,7 @@
 
   </section>
 
-  <!-- RODAPÉ -->
+  <!-- FOOTER = Rodapé -->
 
   <footer>
 
@@ -309,7 +355,7 @@
 
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Conexão com JavaScript -->
 
   <script src="script.js"></script>
 
