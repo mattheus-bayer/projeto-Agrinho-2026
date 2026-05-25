@@ -1,70 +1,40 @@
-<!-- 
-DOCTYPE informa ao navegador que o documento é HTML5
--->
 <!DOCTYPE html>
 
-<!-- 
-Tag principal do HTML
-lang="pt-br" define o idioma do site
--->
 <html lang="pt-br">
 
 <head>
 
-  <!-- 
-  Permite usar acentos e caracteres especiais
-  -->
+  <!-- Configuração de acentos -->
   <meta charset="UTF-8">
 
-  <!-- 
-  Responsividade para celular e tablet
-  -->
+  <!-- Responsividade -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 
-  Nome da aba do navegador
-  -->
+  <!-- Título da aba -->
   <title>Agro Forte</title>
 
-  <!-- 
-  Conecta o HTML ao arquivo CSS
-  -->
+  <!-- Conexão com CSS -->
   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-  <!-- 
-  HEADER = Cabeçalho VISÍVEL do site
-  Normalmente contém:
-  - logo
-  - menu
-  - navegação
-  -->
+  <!-- MENU / CABEÇALHO -->
+
   <header>
 
-    <!-- 
-    DIV usada para organizar conteúdo
-    class="logo" será usada no CSS
-    -->
+    <!-- LOGO -->
+
     <div class="logo">
 
       🌱 Agro Forte
 
     </div>
 
-    <!-- 
-    NAV representa o menu de navegação
-    -->
-    <nav>
+    <!-- MENU -->
 
-      <!-- 
-      Links do menu
-      
-      href="#home"
-      leva para a seção com id="home"
-      -->
+    <nav>
 
       <a href="#home">Home</a>
 
@@ -84,47 +54,31 @@ lang="pt-br" define o idioma do site
 
   </header>
 
-  <!-- 
-  SECTION divide o site em partes
-  -->
+  <!-- BANNER -->
+
   <section class="banner" id="home">
 
-    <!-- 
-    IMG mostra imagens
-    
-    src = local da imagem
-    alt = descrição da imagem
-    -->
+    <!-- Imagem principal -->
 
-    <img src="imagens/banner.jpg" alt="Banner do agro">
+    <img src="img/banner.jpg" alt="Banner do Agro">
 
-    <!-- 
-    Texto sobre o banner
-    -->
+    <!-- Texto sobre imagem -->
+
     <div class="texto-banner">
 
-      <!-- 
-      H1 = título principal do site
-      O ideal é existir apenas 1 H1
-      -->
-
       <h1>
+
         Agro Forte, Futuro Sustentável
+
       </h1>
 
-      <!-- 
-      P = parágrafo
-      -->
-
       <p>
+
         Tecnologia e sustentabilidade transformando o agronegócio.
+
       </p>
 
-      <!-- 
-      BUTTON cria um botão
-      
-      onclick chama uma função JavaScript
-      -->
+      <!-- Botão modo escuro -->
 
       <button onclick="modoEscuro()">
 
@@ -140,10 +94,6 @@ lang="pt-br" define o idioma do site
 
   <section class="sobre" id="sobre">
 
-    <!-- 
-    H2 = subtítulo
-    -->
-
     <h2>Sobre o Projeto</h2>
 
     <p>
@@ -156,9 +106,9 @@ lang="pt-br" define o idioma do site
 
     <p>
 
-      O objetivo é demonstrar como a tecnologia pode
-      ajudar produtores rurais a preservar recursos
-      naturais e aumentar a produtividade.
+      O objetivo é mostrar como a tecnologia pode ajudar
+      produtores rurais a preservar recursos naturais
+      e aumentar a produtividade.
 
     </p>
 
@@ -168,11 +118,11 @@ lang="pt-br" define o idioma do site
 
   <section class="galeria">
 
-    <img src="imagens/agro1.jpg" alt="Trator agrícola">
+    <img src="img/agro1.jpg" alt="Trator agrícola">
 
-    <img src="imagens/agro2.jpg" alt="Plantação sustentável">
+    <img src="img/agro2.jpg" alt="Plantação sustentável">
 
-    <img src="imagens/agro3.jpg" alt="Drone agrícola">
+    <img src="img/agro3.jpg" alt="Drone agrícola">
 
   </section>
 
@@ -184,14 +134,14 @@ lang="pt-br" define o idioma do site
 
     <div class="card">
 
-      <img src="imagens/tecnologia.jpg" alt="Tecnologia no agro">
+      <img src="img/tecnologia.jpg" alt="Tecnologia agrícola">
 
       <h3>Tecnologia no Agro</h3>
 
       <p>
 
-        Drones, sensores e inteligência artificial
-        ajudam no monitoramento das lavouras.
+        Drones, sensores e inteligência artificial ajudam
+        no monitoramento das lavouras e reduzem desperdícios.
 
       </p>
 
@@ -201,14 +151,14 @@ lang="pt-br" define o idioma do site
 
     <div class="card">
 
-      <img src="imagens/sustentabilidade.jpg" alt="Sustentabilidade">
+      <img src="img/sustentabilidade.jpg" alt="Sustentabilidade">
 
       <h3>Sustentabilidade</h3>
 
       <p>
 
-        Produzir alimentos preservando o meio ambiente
-        é essencial para o futuro.
+        Produzir alimentos preservando água, solo e meio ambiente
+        é essencial para o futuro das próximas gerações.
 
       </p>
 
@@ -222,12 +172,19 @@ lang="pt-br" define o idioma do site
 
     <h2>Blog AgroTech</h2>
 
-    <img src="imagens/blog.jpg" alt="Blog agro">
+    <img src="img/blog.jpg" alt="Blog agro">
 
     <p>
 
-      A agricultura moderna utiliza tecnologia para
-      monitorar plantações e prever mudanças climáticas.
+      A agricultura moderna utiliza tecnologia para monitorar
+      plantações, prever mudanças climáticas e otimizar recursos naturais.
+
+    </p>
+
+    <p>
+
+      Sistemas inteligentes ajudam agricultores a tomar decisões
+      mais rápidas e eficientes.
 
     </p>
 
@@ -241,13 +198,9 @@ lang="pt-br" define o idioma do site
 
     <p>
 
-      Qual dessas práticas ajuda o meio ambiente?
+      Qual dessas práticas ajuda na preservação ambiental?
 
     </p>
-
-    <!-- 
-    Cada botão chama uma função diferente
-    -->
 
     <button onclick="respostaCorreta()">
 
@@ -267,9 +220,7 @@ lang="pt-br" define o idioma do site
 
     </button>
 
-    <!-- 
-    Resultado será alterado pelo JavaScript
-    -->
+    <!-- Resultado -->
 
     <p id="resultadoQuiz"></p>
 
@@ -287,17 +238,14 @@ lang="pt-br" define o idioma do site
 
     </p>
 
-    <!-- 
-    IFRAME incorpora conteúdo externo
-    nesse caso um mapa
-    -->
-
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14627.709784082076!2d-46.6333087!3d-23.5505209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8d9b3b7d1%3A0x8d8c4a2d9f8f3f1!2sS%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
       width="100%"
       height="400"
       style="border:0;"
+      allowfullscreen=""
       loading="lazy">
+
     </iframe>
 
   </section>
@@ -308,30 +256,26 @@ lang="pt-br" define o idioma do site
 
     <h2>ChatBot Agro IA</h2>
 
-    <img src="imagens/ia.jpg" alt="IA no agro">
+    <img src="img/ia.jpg.png" alt="IA no agro">
 
     <div class="caixa-chat">
 
-      <!-- 
-      O JavaScript altera esta mensagem
-      -->
-
       <p id="mensagemBot">
 
-        Olá! Pergunte algo sobre sustentabilidade.
+        Olá! Pergunte algo sobre sustentabilidade ou tecnologia agrícola.
 
       </p>
 
     </div>
 
-    <!-- 
-    INPUT permite o usuário digitar
-    -->
+    <!-- Campo de texto -->
 
     <input
       type="text"
       id="pergunta"
       placeholder="Digite sua pergunta">
+
+    <!-- Botão -->
 
     <button onclick="enviarPergunta()">
 
@@ -349,11 +293,11 @@ lang="pt-br" define o idioma do site
 
     <p>Email: agro@email.com</p>
 
+    <p>Projeto desenvolvido para o Agrinho 2026.</p>
+
   </section>
 
-  <!-- 
-  FOOTER = rodapé do site
-  -->
+  <!-- RODAPÉ -->
 
   <footer>
 
@@ -365,9 +309,7 @@ lang="pt-br" define o idioma do site
 
   </footer>
 
-  <!-- 
-  Conecta o JavaScript ao HTML
-  -->
+  <!-- JavaScript -->
 
   <script src="script.js"></script>
 

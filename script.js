@@ -1,38 +1,20 @@
-/* 
-FUNÇÃO DO MODO ESCURO
-*/
+/* MODO ESCURO */
 
 function modoEscuro(){
-
-  /* 
-  classList.toggle adiciona ou remove
-  a classe "dark"
-  */
 
   document.body.classList.toggle("dark");
 
 }
 
-/* 
-FUNÇÃO RESPOSTA CORRETA
-*/
+/* QUIZ */
 
 function respostaCorreta(){
 
-  /* 
-  getElementById seleciona um elemento
-  pelo ID
-  */
-
   document.getElementById("resultadoQuiz").innerHTML =
 
-  "✅ Correto! Sustentabilidade é essencial.";
+  "✅ Correto! Sustentabilidade é essencial para o futuro do planeta.";
 
 }
-
-/* 
-FUNÇÃO RESPOSTA ERRADA
-*/
 
 function respostaErrada(){
 
@@ -42,31 +24,24 @@ function respostaErrada(){
 
 }
 
-/* 
-CHATBOT IA
-*/
+/* CHATBOT IA */
 
 function enviarPergunta(){
 
-  /* 
-  pega o texto digitado
-  */
+  /* pega texto digitado */
 
   let pergunta =
 
   document.getElementById("pergunta").value.toLowerCase();
 
-  /* variável resposta */
   let resposta = "";
 
-  /* 
-  IF = condição
-  */
+  /* condições */
 
   if(pergunta.includes("agua")){
 
     resposta =
-    "💧 Economizar água é essencial.";
+    "💧 Economizar água é essencial para a agricultura sustentável.";
   }
 
   else if(pergunta.includes("ia")){
@@ -78,7 +53,7 @@ function enviarPergunta(){
   else if(pergunta.includes("drone")){
 
     resposta =
-    "🚁 Drones ajudam no monitoramento das lavouras.";
+    "🚁 Drones agrícolas ajudam no monitoramento das lavouras.";
   }
 
   else if(pergunta.includes("sustentabilidade")){
@@ -90,11 +65,15 @@ function enviarPergunta(){
   else{
 
     resposta =
-    "🤖 Ainda estou aprendendo sobre o agro.";
+    "🤖 Ainda estou aprendendo sobre o agro sustentável.";
   }
 
-  /* altera mensagem do chatbot */
+  /* altera mensagem */
 
   document.getElementById("mensagemBot").innerHTML = resposta;
+
+  /* limpa campo */
+
+  document.getElementById("pergunta").value = "";
 
 }
