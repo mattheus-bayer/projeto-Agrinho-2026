@@ -1,46 +1,374 @@
+<!-- 
+DOCTYPE informa ao navegador que o documento é HTML5
+-->
 <!DOCTYPE html>
+
+<!-- 
+Tag principal do HTML
+lang="pt-br" define o idioma do site
+-->
 <html lang="pt-br">
 
 <head>
+
+  <!-- 
+  Permite usar acentos e caracteres especiais
+  -->
   <meta charset="UTF-8">
 
-  <!-- Título que aparece na aba do navegador -->
+  <!-- 
+  Responsividade para celular e tablet
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+  Nome da aba do navegador
+  -->
   <title>Agro Forte</title>
 
-  <!-- Conecta o arquivo CSS ao HTML -->
+  <!-- 
+  Conecta o HTML ao arquivo CSS
+  -->
   <link rel="stylesheet" href="style.css">
 
-  <img src="img/agro01.jpg" alt="Tecnologia no agro">
 </head>
 
 <body>
 
-  <!-- Cabeçalho principal -->
+  <!-- 
+  HEADER = Cabeçalho VISÍVEL do site
+  Normalmente contém:
+  - logo
+  - menu
+  - navegação
+  -->
   <header>
 
-    <!-- Título principal do site -->
-    <h1>Agro Forte, Futuro Sustentável</h1>
+    <!-- 
+    DIV usada para organizar conteúdo
+    class="logo" será usada no CSS
+    -->
+    <div class="logo">
 
-    <!-- Botão que chama uma função JavaScript -->
-    <button onclick="modoEscuro()">
-      🌙 Modo Escuro
-    </button>
+      🌱 Agro Forte
+
+    </div>
+
+    <!-- 
+    NAV representa o menu de navegação
+    -->
+    <nav>
+
+      <!-- 
+      Links do menu
+      
+      href="#home"
+      leva para a seção com id="home"
+      -->
+
+      <a href="#home">Home</a>
+
+      <a href="#sobre">Sobre</a>
+
+      <a href="#tecnologia">Tecnologia</a>
+
+      <a href="#blog">Blog</a>
+
+      <a href="#quiz">Quiz</a>
+
+      <a href="#chatbot">IA</a>
+
+      <a href="#contato">Contato</a>
+
+    </nav>
 
   </header>
 
-  <!-- Seção principal -->
-  <section>
+  <!-- 
+  SECTION divide o site em partes
+  -->
+  <section class="banner" id="home">
 
-    <h2>Tecnologia no Campo</h2>
+    <!-- 
+    IMG mostra imagens
+    
+    src = local da imagem
+    alt = descrição da imagem
+    -->
+
+    <img src="imagens/banner.jpg" alt="Banner do agro">
+
+    <!-- 
+    Texto sobre o banner
+    -->
+    <div class="texto-banner">
+
+      <!-- 
+      H1 = título principal do site
+      O ideal é existir apenas 1 H1
+      -->
+
+      <h1>
+        Agro Forte, Futuro Sustentável
+      </h1>
+
+      <!-- 
+      P = parágrafo
+      -->
+
+      <p>
+        Tecnologia e sustentabilidade transformando o agronegócio.
+      </p>
+
+      <!-- 
+      BUTTON cria um botão
+      
+      onclick chama uma função JavaScript
+      -->
+
+      <button onclick="modoEscuro()">
+
+        🌙 Modo Escuro
+
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- SOBRE -->
+
+  <section class="sobre" id="sobre">
+
+    <!-- 
+    H2 = subtítulo
+    -->
+
+    <h2>Sobre o Projeto</h2>
 
     <p>
-      A tecnologia ajuda a produzir alimentos de forma sustentável,
-      reduzindo desperdícios e protegendo o meio ambiente.
+
+      Este projeto foi desenvolvido utilizando HTML,
+      CSS e JavaScript com foco em sustentabilidade
+      e tecnologia no agronegócio.
+
+    </p>
+
+    <p>
+
+      O objetivo é demonstrar como a tecnologia pode
+      ajudar produtores rurais a preservar recursos
+      naturais e aumentar a produtividade.
+
     </p>
 
   </section>
 
-  <!-- Conecta o JavaScript -->
+  <!-- GALERIA -->
+
+  <section class="galeria">
+
+    <img src="imagens/agro1.jpg" alt="Trator agrícola">
+
+    <img src="imagens/agro2.jpg" alt="Plantação sustentável">
+
+    <img src="imagens/agro3.jpg" alt="Drone agrícola">
+
+  </section>
+
+  <!-- TECNOLOGIA -->
+
+  <section class="cards" id="tecnologia">
+
+    <!-- CARD 1 -->
+
+    <div class="card">
+
+      <img src="imagens/tecnologia.jpg" alt="Tecnologia no agro">
+
+      <h3>Tecnologia no Agro</h3>
+
+      <p>
+
+        Drones, sensores e inteligência artificial
+        ajudam no monitoramento das lavouras.
+
+      </p>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="card">
+
+      <img src="imagens/sustentabilidade.jpg" alt="Sustentabilidade">
+
+      <h3>Sustentabilidade</h3>
+
+      <p>
+
+        Produzir alimentos preservando o meio ambiente
+        é essencial para o futuro.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- BLOG -->
+
+  <section class="blog" id="blog">
+
+    <h2>Blog AgroTech</h2>
+
+    <img src="imagens/blog.jpg" alt="Blog agro">
+
+    <p>
+
+      A agricultura moderna utiliza tecnologia para
+      monitorar plantações e prever mudanças climáticas.
+
+    </p>
+
+  </section>
+
+  <!-- QUIZ -->
+
+  <section class="quiz" id="quiz">
+
+    <h2>Quiz Ambiental</h2>
+
+    <p>
+
+      Qual dessas práticas ajuda o meio ambiente?
+
+    </p>
+
+    <!-- 
+    Cada botão chama uma função diferente
+    -->
+
+    <button onclick="respostaCorreta()">
+
+      Uso consciente da água
+
+    </button>
+
+    <button onclick="respostaErrada()">
+
+      Queimadas ilegais
+
+    </button>
+
+    <button onclick="respostaErrada()">
+
+      Desmatamento excessivo
+
+    </button>
+
+    <!-- 
+    Resultado será alterado pelo JavaScript
+    -->
+
+    <p id="resultadoQuiz"></p>
+
+  </section>
+
+  <!-- MAPA -->
+
+  <section class="mapa">
+
+    <h2>Mapa Agrícola</h2>
+
+    <p>
+
+      O Brasil é um dos maiores produtores agrícolas do mundo.
+
+    </p>
+
+    <!-- 
+    IFRAME incorpora conteúdo externo
+    nesse caso um mapa
+    -->
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18"
+      width="100%"
+      height="400"
+      style="border:0;"
+      loading="lazy">
+    </iframe>
+
+  </section>
+
+  <!-- CHATBOT -->
+
+  <section class="chatbot" id="chatbot">
+
+    <h2>ChatBot Agro IA</h2>
+
+    <img src="imagens/ia.jpg" alt="IA no agro">
+
+    <div class="caixa-chat">
+
+      <!-- 
+      O JavaScript altera esta mensagem
+      -->
+
+      <p id="mensagemBot">
+
+        Olá! Pergunte algo sobre sustentabilidade.
+
+      </p>
+
+    </div>
+
+    <!-- 
+    INPUT permite o usuário digitar
+    -->
+
+    <input
+      type="text"
+      id="pergunta"
+      placeholder="Digite sua pergunta">
+
+    <button onclick="enviarPergunta()">
+
+      Enviar
+
+    </button>
+
+  </section>
+
+  <!-- CONTATO -->
+
+  <section class="contato" id="contato">
+
+    <h2>Contato</h2>
+
+    <p>Email: agro@email.com</p>
+
+  </section>
+
+  <!-- 
+  FOOTER = rodapé do site
+  -->
+
+  <footer>
+
+    <p>
+
+      © 2026 - Projeto Agro Forte
+
+    </p>
+
+  </footer>
+
+  <!-- 
+  Conecta o JavaScript ao HTML
+  -->
+
   <script src="script.js"></script>
 
 </body>

@@ -1,36 +1,193 @@
-/* Estilo geral do site */
-body{
-  font-family: Arial;
+/* 
+* seleciona TODOS os elementos
+*/
+
+*{
+
+  /* remove margens automáticas */
   margin:0;
+
+  /* remove espaçamentos */
+  padding:0;
+
+  /* melhora cálculos de tamanho */
+  box-sizing:border-box;
+}
+
+/* 
+BODY representa o corpo do site
+*/
+
+body{
+
+  font-family:Arial, sans-serif;
+
   background:#f4f4f4;
+
+  color:#333;
 }
 
-/* Cabeçalho */
+/* HEADER */
+
 header{
-  background:green;
+
+  background:#1b5e20;
+
+  /* FLEX coloca elementos lado a lado */
+  display:flex;
+
+  /* espaço entre logo e menu */
+  justify-content:space-between;
+
+  /* centraliza verticalmente */
+  align-items:center;
+
+  padding:20px 40px;
+
+  /* menu fixo */
+  position:sticky;
+
+  top:0;
+}
+
+/* LOGO */
+
+.logo{
+
   color:white;
-  padding:20px;
-  text-align:center;
+
+  font-size:28px;
+
+  font-weight:bold;
 }
 
-/* Conteúdo principal */
-section{
-  padding:20px;
-}
+/* LINKS DO MENU */
 
-/* Classe usada no modo escuro */
-.dark{
-  background:#222;
+nav a{
+
   color:white;
+
+  text-decoration:none;
+
+  margin-left:20px;
+
+  transition:0.3s;
 }
 
-.galeria img{
+/* HOVER = efeito ao passar mouse */
+
+nav a:hover{
+
+  color:#a5d6a7;
+}
+
+/* BANNER */
+
+.banner{
+
+  position:relative;
+}
+
+/* IMAGEM DO BANNER */
+
+.banner img{
 
   width:100%;
 
-  max-width:350px;
+  height:600px;
 
-  height:220px;
+  object-fit:cover;
+}
+
+/* TEXTO SOBRE IMAGEM */
+
+.texto-banner{
+
+  position:absolute;
+
+  top:50%;
+
+  left:50%;
+
+  transform:translate(-50%, -50%);
+
+  background:rgba(0,0,0,0.5);
+
+  color:white;
+
+  padding:30px;
+
+  border-radius:15px;
+
+  text-align:center;
+}
+
+/* H1 */
+
+.texto-banner h1{
+
+  font-size:48px;
+
+  margin-bottom:20px;
+}
+
+/* BOTÃO */
+
+button{
+
+  margin-top:20px;
+
+  padding:12px 20px;
+
+  border:none;
+
+  border-radius:8px;
+
+  background:#2e7d32;
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+/* EFEITO HOVER */
+
+button:hover{
+
+  background:#1b5e20;
+}
+
+/* SECTION */
+
+section{
+
+  padding:60px 30px;
+
+  text-align:center;
+}
+
+/* GALERIA */
+
+.galeria{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+/* IMAGENS */
+
+.galeria img{
+
+  width:350px;
+
+  height:250px;
 
   object-fit:cover;
 
@@ -39,4 +196,141 @@ section{
   box-shadow:0 0 15px rgba(0,0,0,0.3);
 
   transition:0.3s;
+}
+
+/* EFEITO */
+
+.galeria img:hover{
+
+  transform:scale(1.05);
+}
+
+/* CARDS */
+
+.cards{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:30px;
+
+  flex-wrap:wrap;
+}
+
+.card{
+
+  width:350px;
+
+  background:white;
+
+  border-radius:15px;
+
+  overflow:hidden;
+
+  box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+/* IMAGEM CARD */
+
+.card img{
+
+  width:100%;
+
+  height:220px;
+
+  object-fit:cover;
+}
+
+/* BLOG */
+
+.blog{
+
+  background:#e8f5e9;
+}
+
+.blog img{
+
+  width:80%;
+
+  max-width:700px;
+
+  border-radius:15px;
+
+  margin:20px 0;
+}
+
+/* QUIZ */
+
+.quiz{
+
+  background:#f1f8e9;
+}
+
+/* RESULTADO QUIZ */
+
+#resultadoQuiz{
+
+  margin-top:20px;
+
+  font-weight:bold;
+
+  font-size:20px;
+}
+
+/* CHATBOT */
+
+.chatbot{
+
+  background:#e8f5e9;
+}
+
+/* CAIXA CHAT */
+
+.caixa-chat{
+
+  background:white;
+
+  max-width:600px;
+
+  margin:20px auto;
+
+  padding:20px;
+
+  border-radius:10px;
+}
+
+/* INPUT */
+
+input{
+
+  padding:12px;
+
+  width:300px;
+
+  border-radius:8px;
+
+  border:1px solid #ccc;
+}
+
+/* FOOTER */
+
+footer{
+
+  background:#1b5e20;
+
+  color:white;
+
+  text-align:center;
+
+  padding:20px;
+}
+
+/* MODO ESCURO */
+
+.dark{
+
+  background:#121212;
+
+  color:white;
 }
