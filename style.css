@@ -24,8 +24,19 @@ section{
   color:white;
 }
 
-.banner img{
+.galeria img{
+
   width:100%;
-  max-width:600px;
-  border-radius:10px;
+
+  max-width:350px;
+
+  height:220px;
+
+  object-fit:cover;
+
+  border-radius:15px;
+
+  box-shadow:0 0 15px rgba(0,0,0,0.3);
+
+  transition:0.3s;
 }
