@@ -16,7 +16,7 @@ html{
   scroll-behavior:smooth;
 }
 
-/* BODY = corpo do site */
+/* BODY = Corpo do site */
 
 body{
 
@@ -124,7 +124,7 @@ nav a:hover{
   backdrop-filter:blur(5px);
 }
 
-/* Título principal */
+/* H1 */
 
 .texto-banner h1{
 
@@ -276,7 +276,7 @@ section{
   object-fit:cover;
 }
 
-/* Título card */
+/* Card título */
 
 .card h3{
 
@@ -317,7 +317,7 @@ section{
   background:#f1f8e9;
 }
 
-/* Resultado */
+/* Resultado quiz */
 
 #resultadoQuiz{
 
@@ -342,7 +342,7 @@ section{
   background:#f1f8e9;
 }
 
-/* Caixa chat */
+/* Caixa chatbot */
 
 .caixa-chat{
 
@@ -398,26 +398,14 @@ footer{
 
   background:#121212;
 
-  color:white;
+  color:#f4f4f4;
 }
 
 .dark section{
 
   background:#1e1e1e;
-}
 
-.dark .card{
-
-  background:#2c2c2c;
-
-  color:white;
-}
-
-.dark .caixa-chat{
-
-  background:#2c2c2c;
-
-  color:white;
+  color:#f4f4f4;
 }
 
 .dark header{
@@ -428,6 +416,51 @@ footer{
 .dark footer{
 
   background:#000;
+
+  color:white;
+}
+
+.dark .card{
+
+  background:#2c2c2c;
+
+  color:#f4f4f4;
+}
+
+.dark .caixa-chat{
+
+  background:#2c2c2c;
+
+  color:#f4f4f4;
+}
+
+.dark .texto-banner{
+
+  background:rgba(0,0,0,0.8);
+}
+
+.dark nav a{
+
+  color:white;
+}
+
+.dark input{
+
+  background:#333;
+
+  color:white;
+
+  border:1px solid #555;
+}
+
+.dark button{
+
+  background:#388e3c;
+}
+
+.dark button:hover{
+
+  background:#2e7d32;
 }
 
 /* RESPONSIVO */

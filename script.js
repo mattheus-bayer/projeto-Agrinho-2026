@@ -10,41 +10,158 @@ function modoEscuro(){
 
 let perguntaAtual = 0;
 
+/* Lista perguntas */
+
 const perguntas = [
 
   {
+
     pergunta:
-    "1. Qual prática ajuda na preservação ambiental?"
+    "1. Qual prática contribui para a preservação dos recursos hídricos no campo?",
+
+    respostas:[
+      "Uso consciente da água",
+      "Desmatamento",
+      "Queimadas ilegais"
+    ],
+
+    correta:0
+
   },
 
   {
+
     pergunta:
-    "2. Qual tecnologia ajuda no monitoramento agrícola?"
+    "2. Qual tecnologia é utilizada para monitorar plantações em grandes áreas?",
+
+    respostas:[
+      "Máquina de escrever",
+      "Drones agrícolas",
+      "Televisão"
+    ],
+
+    correta:1
+
   },
 
   {
+
     pergunta:
-    "3. O que significa sustentabilidade?"
+    "3. O que significa agricultura sustentável?",
+
+    respostas:[
+      "Produzir sem preservar o meio ambiente",
+      "Produzir preservando recursos naturais",
+      "Aumentar queimadas"
+    ],
+
+    correta:1
+
+  },
+
+  {
+
+    pergunta:
+    "4. Qual recurso ajuda a economizar água na agricultura?",
+
+    respostas:[
+      "Irrigação inteligente",
+      "Desperdício de água",
+      "Poluição dos rios"
+    ],
+
+    correta:0
+
+  },
+
+  {
+
+    pergunta:
+    "5. Como a Inteligência Artificial ajuda no agronegócio?",
+
+    respostas:[
+      "Monitorando plantações e clima",
+      "Destruindo lavouras",
+      "Aumentando desperdícios"
+    ],
+
+    correta:0
+
+  },
+
+  {
+
+    pergunta:
+    "6. Qual dessas ações ajuda o meio ambiente?",
+
+    respostas:[
+      "Queimadas ilegais",
+      "Preservação das florestas",
+      "Poluição dos rios"
+    ],
+
+    correta:1
+
+  },
+
+  {
+
+    pergunta:
+    "7. Qual é um dos principais objetivos da sustentabilidade?",
+
+    respostas:[
+      "Utilizar recursos sem limites",
+      "Preservar recursos para futuras gerações",
+      "Aumentar o desperdício"
+    ],
+
+    correta:1
+
   }
 
 ];
 
+/* Carrega pergunta */
+
+function carregarPergunta(){
+
+  document.getElementById("perguntaQuiz").innerHTML =
+
+  perguntas[perguntaAtual].pergunta;
+
+  document.getElementById("btn1").innerHTML =
+
+  perguntas[perguntaAtual].respostas[0];
+
+  document.getElementById("btn2").innerHTML =
+
+  perguntas[perguntaAtual].respostas[1];
+
+  document.getElementById("btn3").innerHTML =
+
+  perguntas[perguntaAtual].respostas[2];
+
+}
+
 /* Verifica resposta */
 
-function verificarResposta(resposta){
+function verificarResposta(indice){
 
   const resultado =
+
   document.getElementById("resultadoQuiz");
 
-  if(resposta === "certa"){
+  if(indice === perguntas[perguntaAtual].correta){
 
     resultado.innerHTML =
+
     "✅ Resposta correta!";
   }
 
   else{
 
     resultado.innerHTML =
+
     "❌ Resposta incorreta.";
   }
 
@@ -61,13 +178,15 @@ function proximaPergunta(){
     perguntaAtual = 0;
   }
 
-  document.getElementById("perguntaQuiz").innerHTML =
-
-  perguntas[perguntaAtual].pergunta;
+  carregarPergunta();
 
   document.getElementById("resultadoQuiz").innerHTML = "";
 
 }
+
+/* Carrega primeira pergunta */
+
+carregarPergunta();
 
 /* CHATBOT IA */
 
@@ -117,7 +236,7 @@ function enviarPergunta(){
 
   document.getElementById("mensagemBot").innerHTML = resposta;
 
-  /* Limpa input */
+  /* Limpa campo */
 
   document.getElementById("pergunta").value = "";
 

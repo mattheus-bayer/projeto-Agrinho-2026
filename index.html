@@ -54,7 +54,7 @@
 
   </header>
 
-  <!-- BANNER PRINCIPAL -->
+  <!-- BANNER -->
 
   <section class="banner" id="home">
 
@@ -62,7 +62,7 @@
 
     <img src="img/banner.jpg" alt="Banner Agro">
 
-    <!-- Texto sobre a imagem -->
+    <!-- Texto sobre imagem -->
 
     <div class="texto-banner">
 
@@ -74,7 +74,7 @@
 
       </h1>
 
-      <!-- P = parágrafo -->
+      <!-- Parágrafo -->
 
       <p>
 
@@ -82,7 +82,7 @@
 
       </p>
 
-      <!-- Botão -->
+      <!-- Botão Dark Mode -->
 
       <button onclick="modoEscuro()">
 
@@ -130,11 +130,9 @@
 
   </section>
 
-  <!-- TECNOLOGIA -->
+  <!-- CARDS -->
 
   <section class="cards" id="tecnologia">
-
-    <!-- CARD 1 -->
 
     <div class="card">
 
@@ -151,8 +149,6 @@
 
     </div>
 
-    <!-- CARD 2 -->
-
     <div class="card">
 
       <img src="img/sustentabilidade.jpg" alt="Sustentabilidade">
@@ -161,8 +157,9 @@
 
       <p>
 
-        Sustentabilidade significa produzir alimentos
-        preservando água, solo e meio ambiente.
+        Produzir alimentos preservando água,
+        solo e meio ambiente é essencial
+        para o futuro das próximas gerações.
 
       </p>
 
@@ -226,31 +223,15 @@
 
     <!-- Pergunta -->
 
-    <p id="perguntaQuiz">
+    <p id="perguntaQuiz"></p>
 
-      1. Qual prática ajuda na preservação ambiental?
+    <!-- Botões respostas -->
 
-    </p>
+    <button id="btn1" onclick="verificarResposta(0)"></button>
 
-    <!-- Botões -->
+    <button id="btn2" onclick="verificarResposta(1)"></button>
 
-    <button onclick="verificarResposta('certa')">
-
-      Uso consciente da água
-
-    </button>
-
-    <button onclick="verificarResposta('errada')">
-
-      Queimadas ilegais
-
-    </button>
-
-    <button onclick="verificarResposta('errada')">
-
-      Desmatamento excessivo
-
-    </button>
+    <button id="btn3" onclick="verificarResposta(2)"></button>
 
     <!-- Resultado -->
 
@@ -296,8 +277,6 @@
 
     <h2>ChatBot Agro IA</h2>
 
-    <!-- Caixa do chatbot -->
-
     <div class="caixa-chat">
 
       <p id="mensagemBot">
@@ -314,7 +293,7 @@
 
     </div>
 
-    <!-- Campo de texto -->
+    <!-- Campo texto -->
 
     <input
       type="text"
@@ -343,7 +322,7 @@
 
   </section>
 
-  <!-- FOOTER = Rodapé -->
+  <!-- RODAPÉ -->
 
   <footer>
 
@@ -355,7 +334,7 @@
 
   </footer>
 
-  <!-- Conexão com JavaScript -->
+  <!-- Conexão JavaScript -->
 
   <script src="script.js"></script>
 
