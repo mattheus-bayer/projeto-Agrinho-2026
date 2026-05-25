@@ -1,550 +1,325 @@
-/* =========================
-RESET
-========================= */
-
+/* Remove margens e espaços automáticos do navegador */
 *{
-
   margin:0;
-
   padding:0;
-
   box-sizing:border-box;
 }
 
-/* Rolagem suave */
-
+/* Rolagem suave ao clicar no menu */
 html{
-
   scroll-behavior:smooth;
 }
 
-/* =========================
-BODY
-========================= */
-
+/* Corpo geral do site */
 body{
-
   font-family:Arial, sans-serif;
-
   background:#f4f4f4;
-
   color:#333;
 }
 
-/* =========================
-HEADER
-========================= */
-
+/* Cabeçalho */
 header{
-
   background:#1b5e20;
-
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
-
   padding:20px 40px;
-
   position:sticky;
-
   top:0;
-
   z-index:1000;
 }
 
-/* LOGO */
-
+/* Logo */
 .logo{
-
   color:white;
-
   font-size:28px;
-
   font-weight:bold;
 }
 
-/* LINKS MENU */
-
+/* Links do menu */
 nav a{
-
   color:white;
-
   text-decoration:none;
-
   margin-left:20px;
-
   transition:0.3s;
 }
 
-/* Hover */
-
 nav a:hover{
-
   color:#a5d6a7;
 }
 
-/* =========================
-BANNER
-========================= */
-
+/* Banner */
 .banner{
-
   position:relative;
 }
 
-/* Imagem banner */
-
 .banner img{
-
   width:100%;
-
   height:600px;
-
   object-fit:cover;
 }
 
-/* Texto banner */
-
+/* Texto sobre o banner */
 .texto-banner{
-
   position:absolute;
-
   top:50%;
-
   left:50%;
-
   transform:translate(-50%, -50%);
-
   background:rgba(0,0,0,0.6);
-
   padding:40px;
-
   border-radius:20px;
-
   text-align:center;
-
   color:white;
-
   width:80%;
-
   backdrop-filter:blur(5px);
 }
 
-/* Título */
-
 .texto-banner h1{
-
   font-size:48px;
-
   margin-bottom:20px;
 }
 
-/* =========================
-BOTÕES
-========================= */
-
+/* Botões */
 button{
-
   margin-top:20px;
-
   padding:12px 20px;
-
   border:none;
-
   border-radius:8px;
-
   background:#2e7d32;
-
   color:white;
-
   cursor:pointer;
-
   transition:0.3s;
 }
 
-/* Hover */
-
 button:hover{
-
   background:#1b5e20;
 }
 
-/* =========================
-SECTIONS
-========================= */
-
+/* Seções */
 section{
-
   padding:60px 30px;
-
   text-align:center;
-
   animation:fade 1s;
 }
 
-/* =========================
-ANIMAÇÃO
-========================= */
-
+/* Animação de entrada */
 @keyframes fade{
-
   from{
-
     opacity:0;
-
     transform:translateY(20px);
   }
 
   to{
-
     opacity:1;
-
     transform:translateY(0);
   }
 }
 
-/* =========================
-GALERIA
-========================= */
-
+/* Galeria */
 .galeria{
-
   display:flex;
-
   justify-content:center;
-
   gap:20px;
-
   flex-wrap:wrap;
 }
 
-/* Imagens */
-
 .galeria img{
-
   width:350px;
-
   height:250px;
-
   object-fit:cover;
-
   border-radius:15px;
-
   box-shadow:0 0 15px rgba(0,0,0,0.3);
-
   transition:0.3s;
 }
 
-/* Hover */
-
 .galeria img:hover{
-
   transform:scale(1.05);
 }
 
-/* =========================
-CARDS
-========================= */
-
+/* Cards */
 .cards{
-
   display:flex;
-
   justify-content:center;
-
   gap:30px;
-
   flex-wrap:wrap;
 }
 
-/* Card */
-
 .card{
-
   width:350px;
-
   background:white;
-
   border-radius:15px;
-
   overflow:hidden;
-
   box-shadow:0 0 15px rgba(0,0,0,0.2);
-
   transition:0.3s;
 }
 
-/* Hover */
-
 .card:hover{
-
   transform:translateY(-10px);
 }
 
-/* Imagem card */
-
 .card img{
-
   width:100%;
-
   height:220px;
-
   object-fit:cover;
 }
 
-/* Título */
-
 .card h3{
-
   margin:20px 0;
 }
 
-/* Texto */
-
 .card p{
-
   padding:0 20px 20px 20px;
 }
 
-/* =========================
-BLOG
-========================= */
-
+/* Blog */
 .blog{
-
   background:#e8f5e9;
 }
 
-/* Imagem blog */
-
 .blog img{
-
   width:80%;
-
   max-width:700px;
-
   border-radius:15px;
-
   margin:20px 0;
 }
 
-/* =========================
-QUIZ
-========================= */
-
+/* Quiz */
 .quiz{
-
   background:#f1f8e9;
 }
 
-/* Resultado */
-
 #resultadoQuiz{
-
   margin-top:20px;
-
   font-size:20px;
-
   font-weight:bold;
 }
 
-/* =========================
-MAPA
-========================= */
-
+/* Mapa */
 .mapa{
-
   background:#e8f5e9;
 }
 
-/* =========================
-CHATBOT
-========================= */
-
+/* Chatbot */
 .chatbot{
-
   background:#f1f8e9;
 }
 
-/* Caixa */
-
 .caixa-chat{
-
   background:white;
-
   max-width:600px;
-
   margin:20px auto;
-
   padding:20px;
-
   border-radius:10px;
-
   box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
-/* =========================
-INPUT
-========================= */
-
+/* Campo de texto */
 input{
-
   padding:12px;
-
   width:300px;
-
   border-radius:8px;
-
   border:1px solid #ccc;
 }
 
-/* =========================
-CONTATO
-========================= */
-
+/* Contato */
 .contato{
-
   background:#e8f5e9;
 }
 
-/* =========================
-FOOTER
-========================= */
-
+/* Rodapé */
 footer{
-
   background:#1b5e20;
-
   color:white;
-
   text-align:center;
-
   padding:20px;
 }
 
-/* =========================
-DARK MODE
-========================= */
-
+/* Modo escuro */
 .dark{
-
   background:#121212;
-
   color:#f4f4f4;
 }
 
 .dark section{
-
   background:#1e1e1e;
-
   color:#f4f4f4;
 }
 
 .dark header{
-
   background:#000;
 }
 
 .dark footer{
-
   background:#000;
-
   color:white;
 }
 
 .dark .card{
-
   background:#2c2c2c;
-
   color:#f4f4f4;
 }
 
 .dark .caixa-chat{
-
   background:#2c2c2c;
-
   color:#f4f4f4;
 }
 
 .dark .texto-banner{
-
   background:rgba(0,0,0,0.8);
 }
 
 .dark nav a{
-
   color:white;
 }
 
 .dark input{
-
   background:#333;
-
   color:white;
-
   border:1px solid #555;
 }
 
 .dark button{
-
   background:#388e3c;
 }
 
 .dark button:hover{
-
   background:#2e7d32;
 }
 
-/* =========================
-RESPONSIVO
-========================= */
-
+/* Responsividade para celular */
 @media(max-width:768px){
 
   header{
-
     flex-direction:column;
-
     padding:20px;
   }
 
   nav{
-
     margin-top:15px;
   }
 
   nav a{
-
     display:block;
-
     margin:10px 0;
   }
 
   .texto-banner h1{
-
     font-size:32px;
   }
 
   .banner img{
-
     height:450px;
   }
 
   .galeria img{
-
     width:90%;
   }
 
   .card{
-
     width:90%;
   }
 
   input{
-
     width:90%;
   }
-
 }

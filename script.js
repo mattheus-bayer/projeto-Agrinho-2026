@@ -1,31 +1,18 @@
-/* =========================
-MODO ESCURO
-========================= */
-
+/* Ativa ou desativa o modo escuro */
 function modoEscuro(){
-
   document.body.classList.toggle("dark");
-
 }
 
-/* =========================
-QUIZ
-========================= */
-
-/* Pergunta atual */
-
+/* Controla qual pergunta está aparecendo */
 let perguntaAtual = 0;
 
-/* Pontuação */
-
+/* Guarda a pontuação do usuário */
 let pontuacao = 0;
 
-/* Lista perguntas */
-
+/* Lista com as perguntas, respostas e índice da resposta correta */
 const perguntas = [
 
   {
-
     pergunta:
     "1. Qual prática contribui para a preservação dos recursos hídricos no campo?",
 
@@ -36,11 +23,9 @@ const perguntas = [
     ],
 
     correta:0
-
   },
 
   {
-
     pergunta:
     "2. Qual tecnologia é utilizada para monitorar plantações em grandes áreas?",
 
@@ -51,11 +36,9 @@ const perguntas = [
     ],
 
     correta:1
-
   },
 
   {
-
     pergunta:
     "3. O que significa agricultura sustentável?",
 
@@ -66,11 +49,9 @@ const perguntas = [
     ],
 
     correta:1
-
   },
 
   {
-
     pergunta:
     "4. Qual recurso ajuda a economizar água na agricultura?",
 
@@ -81,11 +62,9 @@ const perguntas = [
     ],
 
     correta:0
-
   },
 
   {
-
     pergunta:
     "5. Como a Inteligência Artificial ajuda no agronegócio?",
 
@@ -96,11 +75,9 @@ const perguntas = [
     ],
 
     correta:0
-
   },
 
   {
-
     pergunta:
     "6. Qual dessas ações ajuda o meio ambiente?",
 
@@ -111,11 +88,9 @@ const perguntas = [
     ],
 
     correta:1
-
   },
 
   {
-
     pergunta:
     "7. Qual é um dos principais objetivos da sustentabilidade?",
 
@@ -126,45 +101,32 @@ const perguntas = [
     ],
 
     correta:1
-
   }
 
 ];
 
-/* =========================
-CARREGAR PERGUNTA
-========================= */
-
+/* Carrega a pergunta atual na tela */
 function carregarPergunta(){
 
   document.getElementById("perguntaQuiz").innerHTML =
-
   perguntas[perguntaAtual].pergunta;
 
   document.getElementById("btn1").innerHTML =
-
   perguntas[perguntaAtual].respostas[0];
 
   document.getElementById("btn2").innerHTML =
-
   perguntas[perguntaAtual].respostas[1];
 
   document.getElementById("btn3").innerHTML =
-
   perguntas[perguntaAtual].respostas[2];
 
 }
 
-/* =========================
-VERIFICAR RESPOSTA
-========================= */
-
+/* Verifica se a resposta escolhida está correta */
 function verificarResposta(indice){
 
   const resultado =
   document.getElementById("resultadoQuiz");
-
-  /* Resposta correta */
 
   if(indice === perguntas[perguntaAtual].correta){
 
@@ -173,32 +135,23 @@ function verificarResposta(indice){
 
     pontuacao++;
 
-  }
-
-  /* Resposta errada */
-
-  else{
+  }else{
 
     resultado.innerHTML =
     "❌ Resposta incorreta.";
 
   }
 
-  /* Troca pergunta automaticamente */
-
+  /* Aguarda 1,5 segundo e troca automaticamente */
   setTimeout(() => {
 
     perguntaAtual++;
-
-    /* Final quiz */
 
     if(perguntaAtual >= perguntas.length){
 
       finalizarQuiz();
 
-    }
-
-    else{
+    }else{
 
       carregarPergunta();
 
@@ -207,79 +160,50 @@ function verificarResposta(indice){
     }
 
   }, 1500);
-
 }
 
-/* =========================
-FINALIZAR QUIZ
-========================= */
-
+/* Mostra mensagem final do quiz */
 function finalizarQuiz(){
 
   document.getElementById("perguntaQuiz").innerHTML =
-
   "🎉 Quiz Finalizado!";
 
   document.getElementById("resultadoQuiz").innerHTML =
-
   "👏 Obrigado por participar do Quiz Ambiental!<br><br>" +
-
   "✅ Você acertou " + pontuacao +
-
   " de " + perguntas.length + " perguntas.";
 
-  /* Esconde botões */
-
   document.getElementById("btn1").style.display = "none";
-
   document.getElementById("btn2").style.display = "none";
-
   document.getElementById("btn3").style.display = "none";
 
-  /* Reinicia */
-
   setTimeout(() => {
-
     reiniciarQuiz();
-
   }, 6000);
-
 }
 
-/* =========================
-REINICIAR QUIZ
-========================= */
-
+/* Reinicia o quiz após alguns segundos */
 function reiniciarQuiz(){
 
   perguntaAtual = 0;
-
   pontuacao = 0;
 
   document.getElementById("btn1").style.display = "inline-block";
-
   document.getElementById("btn2").style.display = "inline-block";
-
   document.getElementById("btn3").style.display = "inline-block";
 
   document.getElementById("resultadoQuiz").innerHTML = "";
 
   carregarPergunta();
-
 }
 
-/* Inicia quiz */
-
+/* Inicia o quiz ao carregar o site */
 carregarPergunta();
 
-/* =========================
-CHATBOT IA
-========================= */
-
+/* Chatbot simples */
 function enviarPergunta(){
 
   let pergunta =
-
   document.getElementById("pergunta").value.toLowerCase();
 
   let resposta = "";
@@ -288,33 +212,28 @@ function enviarPergunta(){
 
     resposta =
     "💧 Economizar água é essencial para a agricultura sustentável.";
-  }
 
-  else if(pergunta.includes("ia")){
+  }else if(pergunta.includes("ia")){
 
     resposta =
     "🤖 A Inteligência Artificial ajuda no monitoramento agrícola.";
-  }
 
-  else if(pergunta.includes("drone")){
+  }else if(pergunta.includes("drone")){
 
     resposta =
     "🚁 Drones agrícolas ajudam no monitoramento das lavouras.";
-  }
 
-  else if(pergunta.includes("sustentabilidade")){
+  }else if(pergunta.includes("sustentabilidade")){
 
     resposta =
     "🌱 Sustentabilidade significa produzir preservando o meio ambiente.";
-  }
 
-  else if(pergunta.includes("agricultura")){
+  }else if(pergunta.includes("agricultura")){
 
     resposta =
     "🌾 A agricultura moderna utiliza tecnologia para aumentar a produtividade.";
-  }
 
-  else{
+  }else{
 
     resposta =
     "🤖 Ainda estou aprendendo sobre o agro sustentável.";
@@ -322,8 +241,5 @@ function enviarPergunta(){
 
   document.getElementById("mensagemBot").innerHTML = resposta;
 
-  /* Limpa campo */
-
   document.getElementById("pergunta").value = "";
-
 }
