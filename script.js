@@ -1,4 +1,6 @@
-/* MODO ESCURO */
+/* =========================
+MODO ESCURO
+========================= */
 
 function modoEscuro(){
 
@@ -6,9 +8,17 @@ function modoEscuro(){
 
 }
 
-/* QUIZ */
+/* =========================
+QUIZ
+========================= */
+
+/* Pergunta atual */
 
 let perguntaAtual = 0;
+
+/* Pontuação */
+
+let pontuacao = 0;
 
 /* Lista perguntas */
 
@@ -121,7 +131,9 @@ const perguntas = [
 
 ];
 
-/* Carrega pergunta */
+/* =========================
+CARREGAR PERGUNTA
+========================= */
 
 function carregarPergunta(){
 
@@ -143,52 +155,126 @@ function carregarPergunta(){
 
 }
 
-/* Verifica resposta */
+/* =========================
+VERIFICAR RESPOSTA
+========================= */
 
 function verificarResposta(indice){
 
   const resultado =
-
   document.getElementById("resultadoQuiz");
+
+  /* Resposta correta */
 
   if(indice === perguntas[perguntaAtual].correta){
 
     resultado.innerHTML =
-
     "✅ Resposta correta!";
+
+    pontuacao++;
+
   }
+
+  /* Resposta errada */
 
   else{
 
     resultado.innerHTML =
-
     "❌ Resposta incorreta.";
+
   }
+
+  /* Troca pergunta automaticamente */
+
+  setTimeout(() => {
+
+    perguntaAtual++;
+
+    /* Final quiz */
+
+    if(perguntaAtual >= perguntas.length){
+
+      finalizarQuiz();
+
+    }
+
+    else{
+
+      carregarPergunta();
+
+      resultado.innerHTML = "";
+
+    }
+
+  }, 1500);
 
 }
 
-/* Próxima pergunta */
+/* =========================
+FINALIZAR QUIZ
+========================= */
 
-function proximaPergunta(){
+function finalizarQuiz(){
 
-  perguntaAtual++;
+  document.getElementById("perguntaQuiz").innerHTML =
 
-  if(perguntaAtual >= perguntas.length){
+  "🎉 Quiz Finalizado!";
 
-    perguntaAtual = 0;
-  }
+  document.getElementById("resultadoQuiz").innerHTML =
 
-  carregarPergunta();
+  "👏 Obrigado por participar do Quiz Ambiental!<br><br>" +
+
+  "✅ Você acertou " + pontuacao +
+
+  " de " + perguntas.length + " perguntas.";
+
+  /* Esconde botões */
+
+  document.getElementById("btn1").style.display = "none";
+
+  document.getElementById("btn2").style.display = "none";
+
+  document.getElementById("btn3").style.display = "none";
+
+  /* Reinicia */
+
+  setTimeout(() => {
+
+    reiniciarQuiz();
+
+  }, 6000);
+
+}
+
+/* =========================
+REINICIAR QUIZ
+========================= */
+
+function reiniciarQuiz(){
+
+  perguntaAtual = 0;
+
+  pontuacao = 0;
+
+  document.getElementById("btn1").style.display = "inline-block";
+
+  document.getElementById("btn2").style.display = "inline-block";
+
+  document.getElementById("btn3").style.display = "inline-block";
 
   document.getElementById("resultadoQuiz").innerHTML = "";
 
+  carregarPergunta();
+
 }
 
-/* Carrega primeira pergunta */
+/* Inicia quiz */
 
 carregarPergunta();
 
-/* CHATBOT IA */
+/* =========================
+CHATBOT IA
+========================= */
 
 function enviarPergunta(){
 

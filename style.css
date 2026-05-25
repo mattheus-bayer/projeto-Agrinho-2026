@@ -1,4 +1,6 @@
-/* Remove margens automáticas */
+/* =========================
+RESET
+========================= */
 
 *{
 
@@ -16,7 +18,9 @@ html{
   scroll-behavior:smooth;
 }
 
-/* BODY = Corpo do site */
+/* =========================
+BODY
+========================= */
 
 body{
 
@@ -27,7 +31,9 @@ body{
   color:#333;
 }
 
-/* HEADER */
+/* =========================
+HEADER
+========================= */
 
 header{
 
@@ -79,7 +85,9 @@ nav a:hover{
   color:#a5d6a7;
 }
 
-/* BANNER */
+/* =========================
+BANNER
+========================= */
 
 .banner{
 
@@ -97,7 +105,7 @@ nav a:hover{
   object-fit:cover;
 }
 
-/* Texto sobre imagem */
+/* Texto banner */
 
 .texto-banner{
 
@@ -124,7 +132,7 @@ nav a:hover{
   backdrop-filter:blur(5px);
 }
 
-/* H1 */
+/* Título */
 
 .texto-banner h1{
 
@@ -133,7 +141,9 @@ nav a:hover{
   margin-bottom:20px;
 }
 
-/* Botões */
+/* =========================
+BOTÕES
+========================= */
 
 button{
 
@@ -154,14 +164,16 @@ button{
   transition:0.3s;
 }
 
-/* Hover botão */
+/* Hover */
 
 button:hover{
 
   background:#1b5e20;
 }
 
-/* Sections */
+/* =========================
+SECTIONS
+========================= */
 
 section{
 
@@ -172,7 +184,9 @@ section{
   animation:fade 1s;
 }
 
-/* Animação */
+/* =========================
+ANIMAÇÃO
+========================= */
 
 @keyframes fade{
 
@@ -191,7 +205,9 @@ section{
   }
 }
 
-/* GALERIA */
+/* =========================
+GALERIA
+========================= */
 
 .galeria{
 
@@ -221,14 +237,16 @@ section{
   transition:0.3s;
 }
 
-/* Hover imagens */
+/* Hover */
 
 .galeria img:hover{
 
   transform:scale(1.05);
 }
 
-/* CARDS */
+/* =========================
+CARDS
+========================= */
 
 .cards{
 
@@ -258,7 +276,7 @@ section{
   transition:0.3s;
 }
 
-/* Hover card */
+/* Hover */
 
 .card:hover{
 
@@ -276,21 +294,23 @@ section{
   object-fit:cover;
 }
 
-/* Card título */
+/* Título */
 
 .card h3{
 
   margin:20px 0;
 }
 
-/* Texto card */
+/* Texto */
 
 .card p{
 
   padding:0 20px 20px 20px;
 }
 
-/* BLOG */
+/* =========================
+BLOG
+========================= */
 
 .blog{
 
@@ -310,14 +330,16 @@ section{
   margin:20px 0;
 }
 
-/* QUIZ */
+/* =========================
+QUIZ
+========================= */
 
 .quiz{
 
   background:#f1f8e9;
 }
 
-/* Resultado quiz */
+/* Resultado */
 
 #resultadoQuiz{
 
@@ -328,21 +350,25 @@ section{
   font-weight:bold;
 }
 
-/* MAPA */
+/* =========================
+MAPA
+========================= */
 
 .mapa{
 
   background:#e8f5e9;
 }
 
-/* CHATBOT */
+/* =========================
+CHATBOT
+========================= */
 
 .chatbot{
 
   background:#f1f8e9;
 }
 
-/* Caixa chatbot */
+/* Caixa */
 
 .caixa-chat{
 
@@ -359,7 +385,9 @@ section{
   box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
-/* INPUT */
+/* =========================
+INPUT
+========================= */
 
 input{
 
@@ -372,14 +400,18 @@ input{
   border:1px solid #ccc;
 }
 
-/* CONTATO */
+/* =========================
+CONTATO
+========================= */
 
 .contato{
 
   background:#e8f5e9;
 }
 
-/* FOOTER */
+/* =========================
+FOOTER
+========================= */
 
 footer{
 
@@ -392,7 +424,9 @@ footer{
   padding:20px;
 }
 
-/* DARK MODE */
+/* =========================
+DARK MODE
+========================= */
 
 .dark{
 
@@ -463,7 +497,9 @@ footer{
   background:#2e7d32;
 }
 
-/* RESPONSIVO */
+/* =========================
+RESPONSIVO
+========================= */
 
 @media(max-width:768px){
 
